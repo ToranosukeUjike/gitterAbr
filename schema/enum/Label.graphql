@@ -1,0 +1,6 @@
+enum Label {
+    Issue
+    Tweet
+    Reply
+    Routine
+}

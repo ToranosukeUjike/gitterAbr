@@ -1,0 +1,8 @@
+type Company {
+    uuid: ID!
+    masterID: ID!
+    name: String!
+
+    createdAt: AWSTimestamp
+    deletedAt: AWSTimestamp
+}

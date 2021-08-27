@@ -1,0 +1,19 @@
+type Post {
+    # PK userID
+    # SK postID
+    companyID: ID!
+    userID: ID!
+    postID: ID!
+
+    # Post
+    title: String
+    text: String!
+    label: Label!
+    assign: ID
+    replyID: ID
+    issueState: IssueState
+    privacyState: PrivacyState!
+
+    createdAt: AWSTimestamp
+    deletedAt: AWSTimestamp
+}
