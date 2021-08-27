@@ -1,11 +1,11 @@
 {
-  "name": "gitter-abr",
+  "name": "practice-gitter",
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
   "dependencies": {
     "@types/uuid": "^8.3.1",
-    "gitter-abr": "git+ssh://git@github.com:ToranosukeUjike/gitterAbr.git#master",
+    "practice-gitter": "git+ssh://git@github.com:ToranosukeUjike/gitterAbr.git#master",
     "graphql": "^15.5.1",
     "uuid": "^8.3.2"
   },
