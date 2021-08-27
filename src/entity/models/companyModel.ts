@@ -1,6 +1,6 @@
 import { Scalars, Company } from '../type';
 import { ICompanyMastRepository } from "../repositoryInterface/companyMastRepository"
-import uuid from 'uuid';
+// import uuid from 'uuid';
 
 export class companyModel {
     public companyMastRepository: ICompanyMastRepository;
@@ -30,7 +30,7 @@ export class companyModel {
         // エラー文変えるべき
         if (!company.name) return '会社名を入力してください';
 
-        this.company.uuid = uuid.v4();
+        // this.company.uuid = uuid.v4();
         this.company.createdAt = new Date().getTime();
 
         this.companyMastRepository.createCompany(this.company);

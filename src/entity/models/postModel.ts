@@ -1,6 +1,6 @@
 import { Post, Label, Scalars, IssueState, PrivacyState } from "../type"
 import { IPostMastRepository } from "../repositoryInterface/postMastRepository"
-import uuid from 'uuid';
+// import uuid from 'uuid';
 
 // オブジェクトの振る舞いを定義する
 // オブジェクトの振る舞いとは具体的にいうと、
@@ -47,7 +47,7 @@ export class postModel {
 
         if (!this.checkText(this.post.text)) return '入力してください';
 
-        this.post.postID = uuid.v4();
+        // this.post.postID = uuid.v4();
         this.post.createdAt = new Date().getTime();
 
         this.postMastRepository.createPostMast(this.post);

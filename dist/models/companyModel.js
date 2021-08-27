@@ -1,10 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.companyModel = void 0;
-const uuid_1 = __importDefault(require("uuid"));
+// import uuid from 'uuid';
 class companyModel {
     companyMastRepository;
     company;
@@ -30,7 +27,7 @@ class companyModel {
         // エラー文変えるべき
         if (!company.name)
             return '会社名を入力してください';
-        this.company.uuid = uuid_1.default.v4();
+        // this.company.uuid = uuid.v4();
         this.company.createdAt = new Date().getTime();
         this.companyMastRepository.createCompany(this.company);
         return 'アカウント作成に成功しました';

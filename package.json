@@ -5,9 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/uuid": "^8.3.1",
-    "practice-gitter": "git+ssh://git@github.com:ToranosukeUjike/gitterAbr.git#master",
-    "graphql": "^15.5.1",
-    "uuid": "^8.3.2"
+    "graphql": "^15.5.1"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.0.1",

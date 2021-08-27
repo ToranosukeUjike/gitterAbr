@@ -1,11 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.postModel = void 0;
 const type_1 = require("../type");
-const uuid_1 = __importDefault(require("uuid"));
+// import uuid from 'uuid';
 // オブジェクトの振る舞いを定義する
 // オブジェクトの振る舞いとは具体的にいうと、
 // ポストの新規作成(getBlancとadd)、
@@ -44,7 +41,7 @@ class postModel {
         }
         if (!this.checkText(this.post.text))
             return '入力してください';
-        this.post.postID = uuid_1.default.v4();
+        // this.post.postID = uuid.v4();
         this.post.createdAt = new Date().getTime();
         this.postMastRepository.createPostMast(this.post);
         return '投稿しました';
