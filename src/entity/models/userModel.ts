@@ -16,14 +16,14 @@ export class userModel {
             uuid: '',
             companyID: '',
             gitterID: '',
-            name: '',
+            name: ''
         }
     }
 
     public createAccount(
         companyID: Scalars['ID'], 
         gitterID: Scalars['ID'],
-        name: string,
+        name: string
     ): string {
         if (companyID) this.user.companyID = companyID;
 

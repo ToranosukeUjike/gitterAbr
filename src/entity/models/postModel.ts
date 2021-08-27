@@ -20,7 +20,7 @@ export class postModel {
 
     public static getBlanc(
         companyID: Scalars['ID'],
-        userID: Scalars['ID'],
+        userID: Scalars['ID']
     ): Post {
         return {
             companyID: companyID,
@@ -32,7 +32,7 @@ export class postModel {
             assign: '',
             replyID: '',
             issueState: IssueState.Open,
-            privacyState: PrivacyState.Public,
+            privacyState: PrivacyState.Public
         }
     }
 
