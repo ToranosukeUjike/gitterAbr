@@ -1,5 +1,5 @@
 {
-  "name": "practice-gitter",
+  "name": "gitter-abr",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -10,9 +10,17 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.0.1",
-    "@graphql-codegen/typescript": "2.0.0"
+    "@graphql-codegen/schema-ast": "^1.18.1",
+    "@graphql-codegen/typescript": "2.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.3",
+    "ts-node": "^9.1.1"
   },
   "scripts": {
+    "build": "npm run generate && npm-run-all clean tsc && npm run generate",
+    "tsc": "tsc",
+    "clean": "rimraf dist/*",
     "generate": "graphql-codegen --config codegen.yml"
   }
 }

@@ -8,7 +8,7 @@ type Post {
     # Post
     title: String
     text: String!
-    label: Label!
+    label: Label
     assign: ID
     replyID: ID
     issueState: IssueState

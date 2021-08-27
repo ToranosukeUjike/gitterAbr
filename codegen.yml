@@ -16,3 +16,6 @@ generates:
   src/entity/type.ts:
     plugins:
       - "typescript"
+  dist/schema.graphql:
+    plugins:
+      - "schema-ast"

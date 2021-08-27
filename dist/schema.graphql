@@ -1,0 +1,66 @@
+scalar AWSDate
+
+scalar AWSDateTime
+
+scalar AWSEmail
+
+scalar AWSIPAddress
+
+scalar AWSJSON
+
+scalar AWSPhone
+
+scalar AWSTime
+
+scalar AWSTimestamp
+
+scalar AWSURL
+
+type Company {
+  uuid: ID!
+  masterID: ID!
+  name: String!
+  createdAt: AWSTimestamp
+  deletedAt: AWSTimestamp
+}
+
+enum IssueState {
+  Open
+  Closed
+}
+
+enum Label {
+  Issue
+  Tweet
+  Reply
+  Routine
+}
+
+type Post {
+  companyID: ID!
+  userID: ID!
+  postID: ID!
+  title: String
+  text: String!
+  label: Label
+  assign: ID
+  replyID: ID
+  issueState: IssueState
+  privacyState: PrivacyState!
+  createdAt: AWSTimestamp
+  deletedAt: AWSTimestamp
+}
+
+enum PrivacyState {
+  Public
+  Private
+}
+
+type User {
+  uuid: ID!
+  companyID: ID!
+  gitterID: ID!
+  name: String!
+  createdAt: AWSTimestamp
+  deletedAt: AWSTimestamp
+}
