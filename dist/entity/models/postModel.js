@@ -27,7 +27,7 @@ class postModel {
             assign: '',
             replyID: '',
             issueState: type_1.IssueState.Open,
-            privacyState: type_1.PrivacyState.Public,
+            privacyState: type_1.PrivacyState.Public
         };
     }
     createPost() {

@@ -13,7 +13,7 @@ class companyModel {
         return {
             uuid: '',
             masterID: '',
-            name: '',
+            name: ''
         };
     }
     get masterID() {

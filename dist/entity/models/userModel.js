@@ -14,7 +14,7 @@ class userModel {
             uuid: '',
             companyID: '',
             gitterID: '',
-            name: '',
+            name: ''
         };
     }
     createAccount(companyID, gitterID, name) {
