@@ -1790,6 +1790,14 @@ get-stream@^5.1.0:
   dependencies:
     pump "^3.0.0"
 
+"gitter-abr@git+ssh://git@github.com:ToranosukeUjike/gitterAbr.git#master":
+  version "1.0.0"
+  resolved "git+ssh://git@github.com:ToranosukeUjike/gitterAbr.git#c6bd99e52fe7d2d68616d50410697d5cff254944"
+  dependencies:
+    "@types/uuid" "^8.3.1"
+    graphql "^15.5.1"
+    uuid "^8.3.2"
+
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
