@@ -1,6 +1,7 @@
-export class userModel {
-    userMastRepository;
-    user;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.userModel = void 0;
+class userModel {
     constructor(userMastRepository, user) {
         this.userMastRepository = userMastRepository;
         this.user = user;
@@ -29,3 +30,4 @@ export class userModel {
         return 'アカウント作成に成功しました';
     }
 }
+exports.userModel = userModel;

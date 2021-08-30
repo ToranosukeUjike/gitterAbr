@@ -1,7 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.companyModel = void 0;
 // import uuid from 'uuid';
-export class companyModel {
-    companyMastRepository;
-    company;
+class companyModel {
     constructor(companyMastRepository, company) {
         this.companyMastRepository = companyMastRepository;
         this.company = company;
@@ -30,3 +31,4 @@ export class companyModel {
         return 'アカウント作成に成功しました';
     }
 }
+exports.companyModel = companyModel;
