@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.companyModel = void 0;
 // import uuid from 'uuid';
-class companyModel {
+export class companyModel {
     companyMastRepository;
     company;
     constructor(companyMastRepository, company) {
@@ -33,4 +30,3 @@ class companyModel {
         return 'アカウント作成に成功しました';
     }
 }
-exports.companyModel = companyModel;

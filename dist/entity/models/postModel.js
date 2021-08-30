@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.postModel = void 0;
-const type_1 = require("../type");
+import { Label, IssueState, PrivacyState } from "../type";
 // import uuid from 'uuid';
 // オブジェクトの振る舞いを定義する
 // オブジェクトの振る舞いとは具体的にいうと、
@@ -9,7 +6,7 @@ const type_1 = require("../type");
 // 更新(更新)、
 // 140文字以内の制限を返す、
 // 内容を聞かれたら内容を返す、等々
-class postModel {
+export class postModel {
     postMastRepository;
     post;
     constructor(postMastRepository, post) {
@@ -26,13 +23,13 @@ class postModel {
             label: undefined,
             assign: '',
             replyID: '',
-            issueState: type_1.IssueState.Open,
-            privacyState: type_1.PrivacyState.Public
+            issueState: IssueState.Open,
+            privacyState: PrivacyState.Public
         };
     }
     createPost() {
         if (this.post.title && this.post.title.length === 0) {
-            this.post.label = type_1.Label.Tweet;
+            this.post.label = Label.Tweet;
         }
         else {
             if (!this.post.label) {
@@ -61,7 +58,7 @@ class postModel {
         this.post.text = text;
     }
     createReply() {
-        this.post.label = type_1.Label.Reply;
+        this.post.label = Label.Reply;
         if (!this.checkText(this.post.text))
             return '入力してください';
         return '返信しました';
@@ -79,4 +76,3 @@ class postModel {
         return true;
     }
 }
-exports.postModel = postModel;

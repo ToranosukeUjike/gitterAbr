@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.userModel = void 0;
-class userModel {
+export class userModel {
     userMastRepository;
     user;
     constructor(userMastRepository, user) {
@@ -32,4 +29,3 @@ class userModel {
         return 'アカウント作成に成功しました';
     }
 }
-exports.userModel = userModel;
