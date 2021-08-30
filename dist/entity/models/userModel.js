@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.userModel = void 0;
-// import uuid from 'uuid';
 class userModel {
     userMastRepository;
     user;
@@ -28,7 +27,6 @@ class userModel {
             return '名前を入力してください';
         else
             this.user.name = name;
-        // this.user.uuid = uuid.v4();
         this.user.createdAt = new Date().getTime();
         this.userMastRepository.createUserAccount(this.user);
         return 'アカウント作成に成功しました';

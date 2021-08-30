@@ -1,6 +1,6 @@
 import { Scalars, User } from '../type';
 import { IUserMastRepository } from "../repositoryInterface/userMastRepository"
-// import uuid from 'uuid';
+
 
 export class userModel {
     public userMastRepository: IUserMastRepository;
@@ -33,7 +33,7 @@ export class userModel {
         if (!name) return '名前を入力してください';
         else this.user.name = name;
 
-        // this.user.uuid = uuid.v4();
+        
         this.user.createdAt = new Date().getTime();
 
         this.userMastRepository.createUserAccount(this.user);
