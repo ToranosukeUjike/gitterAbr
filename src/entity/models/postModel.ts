@@ -68,8 +68,50 @@ export class postModel {
     }
 
     // 変更したテキストを反映
-    public set getText(text: string){
-        this.post.text = text;
+    public get text(): string{
+       return this.post.text;
+    }
+    public set text(input: string){
+        this.post.text = input;
+    }
+
+    public get title(): string {
+        return this.post.title;
+    }
+    public set title(input: string) {
+        this.post.title = input;
+    }
+
+    public get isPrivate(): boolean {
+        return this.post.privacyState === PrivacyState.Private;
+    }
+    public set isPrivate(change: boolean) {
+        if (change) {
+            this.post.privacyState = PrivacyState.Private;
+        } else {
+            this.post.privacyState = PrivacyState.Public;
+        }
+    }
+
+    public get isIssue() {
+        return this.post.label === Label.Issue;
+    }
+    public set isIssue(change: boolean) {
+        if(change) this.post.label = Label.Issue;
+    }
+
+    public get isTweet() {
+        return this.post.label === Label.Tweet;
+    }
+    public set isTweet(change: boolean) {
+        if(change) this.post.label = Label.Tweet;
+    }
+
+    public get isRoutine() {
+        return this.post.label === Label.Routine;
+    }
+    public set isRoutine(change: boolean) {
+        if(change) this.post.label = Label.Routine;
     }
 
     public createReply(): string {

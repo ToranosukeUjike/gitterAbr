@@ -55,7 +55,7 @@ export type Post = {
   companyID: Scalars['ID'];
   userID: Scalars['ID'];
   postID: Scalars['ID'];
-  title?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
   text: Scalars['String'];
   label?: Maybe<Label>;
   assign?: Maybe<Scalars['ID']>;

@@ -55,8 +55,49 @@ class postModel {
         return this.post.postID;
     }
     // 変更したテキストを反映
-    set getText(text) {
-        this.post.text = text;
+    get text() {
+        return this.post.text;
+    }
+    set text(input) {
+        this.post.text = input;
+    }
+    get title() {
+        return this.post.title;
+    }
+    set title(input) {
+        this.post.title = input;
+    }
+    get isPrivate() {
+        return this.post.privacyState === type_1.PrivacyState.Private;
+    }
+    set isPrivate(change) {
+        if (change) {
+            this.post.privacyState = type_1.PrivacyState.Private;
+        }
+        else {
+            this.post.privacyState = type_1.PrivacyState.Public;
+        }
+    }
+    get isIssue() {
+        return this.post.label === type_1.Label.Issue;
+    }
+    set isIssue(change) {
+        if (change)
+            this.post.label = type_1.Label.Issue;
+    }
+    get isTweet() {
+        return this.post.label === type_1.Label.Tweet;
+    }
+    set isTweet(change) {
+        if (change)
+            this.post.label = type_1.Label.Tweet;
+    }
+    get isRoutine() {
+        return this.post.label === type_1.Label.Routine;
+    }
+    set isRoutine(change) {
+        if (change)
+            this.post.label = type_1.Label.Routine;
     }
     createReply() {
         this.post.label = type_1.Label.Reply;
