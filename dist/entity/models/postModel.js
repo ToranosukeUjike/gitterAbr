@@ -17,6 +17,7 @@ class postModel {
     static getBlanc(companyID, userID) {
         return {
             companyID: companyID,
+            userName: '',
             userID: userID,
             postID: '',
             title: '',

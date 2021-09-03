@@ -40,6 +40,7 @@ type Post {
   companyID: ID!
   userID: ID!
   postID: ID!
+  userName: String!
   title: String!
   text: String!
   label: Label

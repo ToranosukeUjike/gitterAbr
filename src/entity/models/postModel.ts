@@ -24,6 +24,7 @@ export class postModel {
     ): Post {
         return {
             companyID: companyID,
+            userName:'',
             userID: userID,
             postID: '',
             title: '',

@@ -6,6 +6,7 @@ type Post {
     postID: ID!
 
     # Post
+    userName: String!
     title: String!
     text: String!
     label: Label
