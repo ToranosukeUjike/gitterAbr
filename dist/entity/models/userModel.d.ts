@@ -5,5 +5,5 @@ export declare class userModel {
     user: User;
     constructor(userMastRepository: IUserMastRepository, user: User);
     static getBlanc(): User;
-    createAccount(companyID: Scalars['ID'], gitterID: Scalars['ID'], name: string): string;
+    createProfile(companyID: Scalars['ID'], username: string): string;
 }

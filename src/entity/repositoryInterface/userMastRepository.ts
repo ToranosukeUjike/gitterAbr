@@ -1,11 +1,11 @@
 import { Scalars, User } from "../type";
 
 export interface IUserMastRepository {
-    createUserAccount(user: User): void;
-    updateUserAccount(user: User): User;
-    deleteUserAccount(user: User): void;
+    createUserProfile(user: User): void;
+    updateUserProfile(user: User): User;
+    deleteUserProfile(user: User): void;
 
-    fetchUserAccount(
+    fetchUserProfile(
         gitterID: Scalars['ID'], 
         companyID: Scalars['ID'],
     ): void;

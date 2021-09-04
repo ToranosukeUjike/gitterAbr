@@ -67,10 +67,9 @@ export declare enum PrivacyState {
 }
 export declare type User = {
     __typename?: 'User';
-    uuid: Scalars['ID'];
+    userID: Scalars['ID'];
     companyID: Scalars['ID'];
-    gitterID: Scalars['ID'];
-    name: Scalars['String'];
+    username: Scalars['String'];
     createdAt?: Maybe<Scalars['AWSTimestamp']>;
     deletedAt?: Maybe<Scalars['AWSTimestamp']>;
 };

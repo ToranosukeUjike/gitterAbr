@@ -13,30 +13,24 @@ export class userModel {
 
     public static getBlanc(): User {
         return {
-            uuid: '',
+            userID: '',
             companyID: '',
-            gitterID: '',
-            name: ''
+            username: ''
         }
     }
 
-    public createAccount(
+    public createProfile(
         companyID: Scalars['ID'], 
-        gitterID: Scalars['ID'],
-        name: string
+        username: string
     ): string {
         if (companyID) this.user.companyID = companyID;
 
-        if (!gitterID) return 'IDを入力してください';
-        else this.user.gitterID = gitterID;
-
-        if (!name) return '名前を入力してください';
-        else this.user.name = name;
-
+        if (!username) return '名前を入力してください';
+        else this.user.username = username;
         
         this.user.createdAt = new Date().getTime();
 
-        this.userMastRepository.createUserAccount(this.user);
-        return 'アカウント作成に成功しました';
+        this.userMastRepository.createUserProfile(this.user);
+        return 'プロフィールの作成に成功しました。';
     }
 }

@@ -1,11 +1,10 @@
 type User {
     # PK uuid
     # SK companyID
-    uuid: ID!
+    userID: ID!
     companyID: ID!
 
-    gitterID: ID!
-    name: String!
+    username: String!
     
     createdAt: AWSTimestamp
     deletedAt: AWSTimestamp

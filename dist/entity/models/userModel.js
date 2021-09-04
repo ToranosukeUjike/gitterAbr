@@ -8,26 +8,21 @@ class userModel {
     }
     static getBlanc() {
         return {
-            uuid: '',
+            userID: '',
             companyID: '',
-            gitterID: '',
-            name: ''
+            username: ''
         };
     }
-    createAccount(companyID, gitterID, name) {
+    createProfile(companyID, username) {
         if (companyID)
             this.user.companyID = companyID;
-        if (!gitterID)
-            return 'IDを入力してください';
-        else
-            this.user.gitterID = gitterID;
-        if (!name)
+        if (!username)
             return '名前を入力してください';
         else
-            this.user.name = name;
+            this.user.username = username;
         this.user.createdAt = new Date().getTime();
-        this.userMastRepository.createUserAccount(this.user);
-        return 'アカウント作成に成功しました';
+        this.userMastRepository.createUserProfile(this.user);
+        return 'プロフィールの作成に成功しました。';
     }
 }
 exports.userModel = userModel;
