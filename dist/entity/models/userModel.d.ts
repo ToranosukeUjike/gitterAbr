@@ -8,4 +8,6 @@ export declare class userModel {
     createProfile(): string;
     get name(): string;
     set name(input: string);
+    get bio(): string;
+    set bio(input: string);
 }

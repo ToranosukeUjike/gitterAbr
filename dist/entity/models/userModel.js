@@ -15,6 +15,7 @@ class userModel {
         };
     }
     createProfile() {
+        console.log(this.user.name);
         if (!this.user.name)
             return '名前を入力してください';
         this.user.createdAt = new Date().getTime();
@@ -26,6 +27,12 @@ class userModel {
     }
     set name(input) {
         this.user.name = input;
+    }
+    get bio() {
+        return this.user.bio || "";
+    }
+    set bio(input) {
+        this.user.bio = input;
     }
 }
 exports.userModel = userModel;

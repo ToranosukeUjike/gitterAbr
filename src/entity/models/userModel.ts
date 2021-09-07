@@ -21,7 +21,7 @@ export class userModel {
     }
 
     public createProfile(): string {
-
+        console.log(this.user.name);
         if (!this.user.name) return '名前を入力してください';
         
         this.user.createdAt = new Date().getTime();
