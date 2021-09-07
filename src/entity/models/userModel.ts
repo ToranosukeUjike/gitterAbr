@@ -15,22 +15,24 @@ export class userModel {
         return {
             userID: userID,
             companyID: '',
-            username: '',
+            userName: '',
         }
     }
 
-    public createProfile(
-        companyID: Scalars['ID'], 
-        username: string
-    ): string {
-        if (companyID) this.user.companyID = companyID;
+    public createProfile(): string {
 
-        if (!username) return '名前を入力してください';
-        else this.user.username = username;
+        if (!this.user.userName) return '名前を入力してください';
         
         this.user.createdAt = new Date().getTime();
 
         this.userMastRepository.createUserProfile(this.user);
         return 'プロフィールの作成に成功しました。';
+    }
+
+    public get userName() {
+        return this.user.userName;
+    }
+    public set userName(input: string) {
+        this.user.userName = input;
     }
 }

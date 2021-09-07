@@ -10,19 +10,21 @@ class userModel {
         return {
             userID: userID,
             companyID: '',
-            username: '',
+            userName: '',
         };
     }
-    createProfile(companyID, username) {
-        if (companyID)
-            this.user.companyID = companyID;
-        if (!username)
+    createProfile() {
+        if (!this.user.userName)
             return '名前を入力してください';
-        else
-            this.user.username = username;
         this.user.createdAt = new Date().getTime();
         this.userMastRepository.createUserProfile(this.user);
         return 'プロフィールの作成に成功しました。';
+    }
+    get userName() {
+        return this.user.userName;
+    }
+    set userName(input) {
+        this.user.userName = input;
     }
 }
 exports.userModel = userModel;

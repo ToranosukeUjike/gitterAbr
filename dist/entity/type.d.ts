@@ -69,7 +69,7 @@ export declare type User = {
     __typename?: 'User';
     userID: Scalars['ID'];
     companyID: Scalars['ID'];
-    username: Scalars['String'];
+    userName: Scalars['String'];
     createdAt?: Maybe<Scalars['AWSTimestamp']>;
     deletedAt?: Maybe<Scalars['AWSTimestamp']>;
 };
