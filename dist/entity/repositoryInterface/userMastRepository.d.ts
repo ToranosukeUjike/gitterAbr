@@ -3,5 +3,5 @@ export interface IUserMastRepository {
     createUserProfile(user: User): void;
     updateUserProfile(user: User): void;
     deleteUserProfile(user: User): void;
-    fetchUserProfile(username: Scalars['ID']): User;
+    fetchUserProfile(username: Scalars['ID']): void;
 }

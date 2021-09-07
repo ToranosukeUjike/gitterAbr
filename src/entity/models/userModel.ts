@@ -54,8 +54,8 @@ export class userModel {
         this.user.bio = input;
     }
 
-    public async fetchMyAccountUsername(username: Scalars['ID']): Promise<User> {
-        const userMast: User = await this.userMastRepository.fetchUserProfile(username);
-        return userMast;
-    }
+    // public async fetchMyAccountUsername(username: Scalars['ID']): Promise<User> {
+    //     const userMast: User = await this.userMastRepository.fetchUserProfile(username);
+    //     return userMast;
+    // }
 }

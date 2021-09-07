@@ -4,6 +4,7 @@ export interface IUserMastRepository {
     createUserProfile(user: User): void;
     updateUserProfile(user: User): void;
     deleteUserProfile(user: User): void;
-
-    fetchUserProfile(username: Scalars['ID']): User;
+    
+    // 仮で返り血をvoidにしてます
+    fetchUserProfile(username: Scalars['ID']): void;
 }

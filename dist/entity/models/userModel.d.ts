@@ -1,4 +1,4 @@
-import { Scalars, User } from '../type';
+import { User } from '../type';
 import { IUserMastRepository } from "../repositoryInterface/userMastRepository";
 export declare class userModel {
     userMastRepository: IUserMastRepository;
@@ -13,5 +13,4 @@ export declare class userModel {
     set name(input: string);
     get bio(): string;
     set bio(input: string);
-    fetchMyAccountUsername(username: Scalars['ID']): Promise<User>;
 }
