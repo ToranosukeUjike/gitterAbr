@@ -11,17 +11,18 @@ export class userModel {
         this.user = user;
     }
 
-    public static getBlanc(userID: string): User {
+    public static getBlanc(username: string): User {
         return {
-            userID: userID,
+            username: username,
             companyID: '',
-            userName: '',
+            name: '',
+            bio: '',
         }
     }
 
     public createProfile(): string {
 
-        if (!this.user.userName) return '名前を入力してください';
+        if (!this.user.name) return '名前を入力してください';
         
         this.user.createdAt = new Date().getTime();
 
@@ -30,9 +31,9 @@ export class userModel {
     }
 
     public get userName() {
-        return this.user.userName;
+        return this.user.name;
     }
     public set userName(input: string) {
-        this.user.userName = input;
+        this.user.name = input;
     }
 }

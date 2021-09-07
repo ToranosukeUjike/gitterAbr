@@ -6,25 +6,26 @@ class userModel {
         this.userMastRepository = userMastRepository;
         this.user = user;
     }
-    static getBlanc(userID) {
+    static getBlanc(username) {
         return {
-            userID: userID,
+            username: username,
             companyID: '',
-            userName: '',
+            name: '',
+            bio: '',
         };
     }
     createProfile() {
-        if (!this.user.userName)
+        if (!this.user.name)
             return '名前を入力してください';
         this.user.createdAt = new Date().getTime();
         this.userMastRepository.createUserProfile(this.user);
         return 'プロフィールの作成に成功しました。';
     }
     get userName() {
-        return this.user.userName;
+        return this.user.name;
     }
     set userName(input) {
-        this.user.userName = input;
+        this.user.name = input;
     }
 }
 exports.userModel = userModel;

@@ -58,9 +58,10 @@ enum PrivacyState {
 }
 
 type User {
-  userID: ID!
+  username: ID!
   companyID: ID
-  userName: String!
+  name: String!
+  bio: String
   createdAt: AWSTimestamp
   deletedAt: AWSTimestamp
 }
