@@ -21,6 +21,12 @@ class userModel {
         this.userMastRepository.createUserProfile(this.user);
         return 'プロフィールの作成に成功しました。';
     }
+    get username() {
+        return this.user.username;
+    }
+    set username(input) {
+        this.user.username = input;
+    }
     get name() {
         return this.user.name;
     }

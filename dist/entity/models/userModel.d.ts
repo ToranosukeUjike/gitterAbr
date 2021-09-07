@@ -6,6 +6,8 @@ export declare class userModel {
     constructor(userMastRepository: IUserMastRepository, user: User);
     static getBlanc(username: string): User;
     createProfile(): string;
+    get username(): string;
+    set username(input: string);
     get name(): string;
     set name(input: string);
     get bio(): string;

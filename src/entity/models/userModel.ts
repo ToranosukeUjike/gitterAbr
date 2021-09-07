@@ -29,6 +29,13 @@ export class userModel {
         return 'プロフィールの作成に成功しました。';
     }
 
+    public get username(): string {
+        return this.user.username;
+    }
+    public set username(input: string) {
+        this.user.username = input;
+    }
+
     public get name(): string {
         return this.user.name;
     }
