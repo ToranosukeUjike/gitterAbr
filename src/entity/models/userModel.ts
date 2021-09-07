@@ -17,16 +17,20 @@ export class userModel {
             companyID: '',
             name: '',
             bio: '',
+            createdAt: new Date().getTime(),
         }
     }
 
     public createProfile(): string {
         if (!this.user.name) return '名前を入力してください';
-        
-        this.user.createdAt = new Date().getTime();
 
         this.userMastRepository.createUserProfile(this.user);
         return 'プロフィールの作成に成功しました。';
+    }
+
+    public updateProfile(user: User): string {
+        this.userMastRepository.updateUserProfile(user);
+        return 'プロフィールの変更に成功しました。';
     }
 
     public get username(): string {
@@ -48,5 +52,10 @@ export class userModel {
     }
     public set bio(input: string) {
         this.user.bio = input;
+    }
+
+    public async fetchMyAccountUsername(username: Scalars['ID']): Promise<User> {
+        const userMast: User = await this.userMastRepository.fetchUserProfile(username);
+        return userMast;
     }
 }
