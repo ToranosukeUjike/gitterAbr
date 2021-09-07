@@ -53,10 +53,10 @@ export enum Label {
 export type Post = {
   __typename?: 'Post';
   companyID: Scalars['ID'];
-  userID: Scalars['ID'];
+  username: Scalars['ID'];
   postID: Scalars['ID'];
-  userName: Scalars['String'];
-  title: Scalars['String'];
+  name: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
   text: Scalars['String'];
   label?: Maybe<Label>;
   assign?: Maybe<Scalars['ID']>;

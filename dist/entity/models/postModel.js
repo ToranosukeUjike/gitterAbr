@@ -14,11 +14,12 @@ class postModel {
         this.postMastRepository = postMastRepository;
         this.post = post;
     }
-    static getBlanc(companyID, userID) {
+    // username => username, userName => name;
+    static getBlanc(companyID, username, name) {
         return {
             companyID: companyID,
-            userName: '',
-            userID: userID,
+            username: username,
+            name: name,
             postID: '',
             title: '',
             text: '',
@@ -30,13 +31,8 @@ class postModel {
         };
     }
     createPost() {
-        if (this.post.title && this.post.title.length === 0) {
-            this.post.label = type_1.Label.Tweet;
-        }
-        else {
-            if (!this.post.label) {
-                return 'ラベルを選択してください';
-            }
+        if (!this.post.label) {
+            return 'ラベルを選択してください';
         }
         if (!this.checkText(this.post.text))
             return '入力してください';
@@ -63,7 +59,7 @@ class postModel {
         this.post.text = input;
     }
     get title() {
-        return this.post.title;
+        return this.post.title || '';
     }
     set title(input) {
         this.post.title = input;

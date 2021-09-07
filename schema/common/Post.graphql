@@ -2,12 +2,12 @@ type Post {
     # PK userID
     # SK postID
     companyID: ID!
-    userID: ID!
+    username: ID!
     postID: ID!
 
     # Post
-    userName: String!
-    title: String!
+    name: String!
+    title: String
     text: String!
     label: Label
     assign: ID

@@ -38,10 +38,10 @@ enum Label {
 
 type Post {
   companyID: ID!
-  userID: ID!
+  username: ID!
   postID: ID!
-  userName: String!
-  title: String!
+  name: String!
+  title: String
   text: String!
   label: Label
   assign: ID

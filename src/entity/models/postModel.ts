@@ -18,14 +18,16 @@ export class postModel {
         this.post = post;
     }
 
+    // username => username, userName => name;
     public static getBlanc(
         companyID: Scalars['ID'],
-        userID: Scalars['ID']
+        username: Scalars['ID'],
+        name: string,
     ): Post {
         return {
             companyID: companyID,
-            userName:'',
-            userID: userID,
+            username: username,
+            name: name,
             postID: '',
             title: '',
             text: '',
@@ -38,12 +40,8 @@ export class postModel {
     }
 
     public createPost(): string {
-        if (this.post.title && this.post.title.length === 0) {
-            this.post.label = Label.Tweet;
-        } else {
-            if (!this.post.label) {
-                return 'ラベルを選択してください';
-            }
+        if (!this.post.label) {
+            return 'ラベルを選択してください';
         }
 
         if (!this.checkText(this.post.text)) return '入力してください';
@@ -77,7 +75,7 @@ export class postModel {
     }
 
     public get title(): string {
-        return this.post.title;
+        return this.post.title || '';
     }
     public set title(input: string) {
         this.post.title = input;

@@ -4,7 +4,7 @@ export declare class postModel {
     postMastRepository: IPostMastRepository;
     post: Post;
     constructor(postMastRepository: IPostMastRepository, post: Post);
-    static getBlanc(companyID: Scalars['ID'], userID: Scalars['ID']): Post;
+    static getBlanc(companyID: Scalars['ID'], username: Scalars['ID'], name: string): Post;
     createPost(): string;
     updatePost(postID: Scalars['ID']): boolean;
     get getPostID(): Scalars['ID'];
