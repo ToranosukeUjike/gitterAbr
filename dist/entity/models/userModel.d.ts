@@ -4,6 +4,6 @@ export declare class userModel {
     userMastRepository: IUserMastRepository;
     user: User;
     constructor(userMastRepository: IUserMastRepository, user: User);
-    static getBlanc(): User;
+    static getBlanc(userID: string): User;
     createProfile(companyID: Scalars['ID'], username: string): string;
 }

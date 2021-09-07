@@ -11,11 +11,11 @@ export class userModel {
         this.user = user;
     }
 
-    public static getBlanc(): User {
+    public static getBlanc(userID: string): User {
         return {
-            userID: '',
+            userID: userID,
             companyID: '',
-            username: ''
+            username: '',
         }
     }
 

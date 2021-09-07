@@ -6,11 +6,11 @@ class userModel {
         this.userMastRepository = userMastRepository;
         this.user = user;
     }
-    static getBlanc() {
+    static getBlanc(userID) {
         return {
-            userID: '',
+            userID: userID,
             companyID: '',
-            username: ''
+            username: '',
         };
     }
     createProfile(companyID, username) {
