@@ -21,8 +21,8 @@ class userModel {
         this.userMastRepository.createUserProfile(this.user);
         return 'プロフィールの作成に成功しました。';
     }
-    updateProfile(user) {
-        this.userMastRepository.updateUserProfile(user);
+    updateProfile() {
+        this.userMastRepository.updateUserProfile(this.user);
         return 'プロフィールの変更に成功しました。';
     }
     get username() {

@@ -28,8 +28,8 @@ export class userModel {
         return 'プロフィールの作成に成功しました。';
     }
 
-    public updateProfile(user: User): string {
-        this.userMastRepository.updateUserProfile(user);
+    public updateProfile(): string {
+        this.userMastRepository.updateUserProfile(this.user);
         return 'プロフィールの変更に成功しました。';
     }
 
