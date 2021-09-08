@@ -4,8 +4,12 @@ export declare class companyModel {
     companyMastRepository: ICompanyMastRepository;
     company: Company;
     constructor(companyMastRepository: ICompanyMastRepository, company: Company);
-    static getBlanc(): Company;
+    static getBlanc(username: Scalars['ID']): Company;
     get masterID(): Scalars['ID'];
     set masterID(input: Scalars['ID']);
-    createAccount(company: Company): string;
+    get companyID(): Scalars['ID'];
+    set companyID(input: Scalars['ID']);
+    get name(): string;
+    set name(input: string);
+    createAccount(): string;
 }

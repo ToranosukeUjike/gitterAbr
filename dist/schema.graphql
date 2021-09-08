@@ -17,7 +17,7 @@ scalar AWSTimestamp
 scalar AWSURL
 
 type Company {
-  uuid: ID!
+  companyID: ID!
   masterID: ID!
   name: String!
   createdAt: AWSTimestamp

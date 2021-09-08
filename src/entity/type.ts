@@ -31,7 +31,7 @@ export type Scalars = {
 
 export type Company = {
   __typename?: 'Company';
-  uuid: Scalars['ID'];
+  companyID: Scalars['ID'];
   masterID: Scalars['ID'];
   name: Scalars['String'];
   createdAt?: Maybe<Scalars['AWSTimestamp']>;

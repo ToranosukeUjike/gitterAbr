@@ -1,5 +1,5 @@
 type Company {
-    uuid: ID!
+    companyID: ID!
     masterID: ID!
     name: String!
 

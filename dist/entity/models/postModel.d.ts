@@ -6,8 +6,6 @@ export declare class postModel {
     constructor(postMastRepository: IPostMastRepository, post: Post);
     static getBlanc(companyID: Scalars['ID'], username: Scalars['ID'], name: string): Post;
     createPost(): string;
-    updatePost(postID: Scalars['ID']): boolean;
-    get getPostID(): Scalars['ID'];
     get text(): string;
     set text(input: string);
     get title(): string;
@@ -20,7 +18,5 @@ export declare class postModel {
     set isTweet(change: boolean);
     get isRoutine(): boolean;
     set isRoutine(change: boolean);
-    createReply(): string;
-    deletePost(): string;
     checkText(text: string): boolean;
 }

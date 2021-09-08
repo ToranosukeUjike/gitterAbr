@@ -11,11 +11,11 @@ export class companyModel {
         this.company = company;
     }
 
-    public static getBlanc(): Company {
+    public static getBlanc(username: Scalars['ID']): Company {
         return {
-            uuid: '',
-            masterID: '',
-            name: ''
+            companyID: '',
+            masterID: username,
+            name: '',
         }
     }
 
@@ -25,10 +25,24 @@ export class companyModel {
     public set masterID(input: Scalars['ID']) {
         this.company.masterID = input;
     }
-    public createAccount(company: Company): string {
-        this.company.masterID = company.masterID;
-        // エラー文変えるべき
-        if (!company.name) return '会社名を入力してください';
+
+    public get companyID(): Scalars['ID'] {
+        return this.company.companyID;
+    }
+    public set companyID(input: Scalars['ID']) {
+        this.company.companyID = input;
+    }
+
+    public get name(): string {
+        return this.company.name;
+    }
+    public set name(input: string) {
+        this.company.name = input;
+    }
+
+    public createAccount(): string {
+        
+        if (!this.company.name) return '会社名を入力してください';
 
         // this.company.uuid = uuid.v4();
         this.company.createdAt = new Date().getTime();

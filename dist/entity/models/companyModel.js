@@ -7,11 +7,11 @@ class companyModel {
         this.companyMastRepository = companyMastRepository;
         this.company = company;
     }
-    static getBlanc() {
+    static getBlanc(username) {
         return {
-            uuid: '',
-            masterID: '',
-            name: ''
+            companyID: '',
+            masterID: username,
+            name: '',
         };
     }
     get masterID() {
@@ -20,10 +20,20 @@ class companyModel {
     set masterID(input) {
         this.company.masterID = input;
     }
-    createAccount(company) {
-        this.company.masterID = company.masterID;
-        // エラー文変えるべき
-        if (!company.name)
+    get companyID() {
+        return this.company.companyID;
+    }
+    set companyID(input) {
+        this.company.companyID = input;
+    }
+    get name() {
+        return this.company.name;
+    }
+    set name(input) {
+        this.company.name = input;
+    }
+    createAccount() {
+        if (!this.company.name)
             return '会社名を入力してください';
         // this.company.uuid = uuid.v4();
         this.company.createdAt = new Date().getTime();

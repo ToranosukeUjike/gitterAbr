@@ -41,17 +41,6 @@ class postModel {
         this.postMastRepository.createPostMast(this.post);
         return '投稿しました';
     }
-    updatePost(postID) {
-        if (postID !== this.post.postID) {
-            return false;
-        }
-        return true;
-    }
-    // 投稿したPostIDの取得
-    get getPostID() {
-        return this.post.postID;
-    }
-    // 変更したテキストを反映
     get text() {
         return this.post.text;
     }
@@ -95,17 +84,6 @@ class postModel {
     set isRoutine(change) {
         if (change)
             this.post.label = type_1.Label.Routine;
-    }
-    createReply() {
-        this.post.label = type_1.Label.Reply;
-        if (!this.checkText(this.post.text))
-            return '入力してください';
-        return '返信しました';
-    }
-    deletePost() {
-        // 削除予定
-        this.postMastRepository.deletePostMast(this.post);
-        return '削除しました';
     }
     checkText(text) {
         if (text.length === 0)

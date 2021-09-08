@@ -54,19 +54,6 @@ export class postModel {
         return '投稿しました';
     }
 
-    public updatePost(postID: Scalars['ID']): boolean {
-        if(postID !== this.post.postID) {
-            return false;
-        }
-        return true;
-    }
-
-    // 投稿したPostIDの取得
-    public get getPostID(): Scalars['ID'] {
-        return this.post.postID;
-    }
-
-    // 変更したテキストを反映
     public get text(): string{
        return this.post.text;
     }
@@ -111,20 +98,6 @@ export class postModel {
     }
     public set isRoutine(change: boolean) {
         if(change) this.post.label = Label.Routine;
-    }
-
-    public createReply(): string {
-        this.post.label = Label.Reply;
-
-        if (!this.checkText(this.post.text)) return '入力してください';
-
-        return '返信しました';
-    }
-
-    public deletePost(): string {
-        // 削除予定
-        this.postMastRepository.deletePostMast(this.post);
-        return '削除しました';
     }
 
     public checkText(text: string): boolean {
