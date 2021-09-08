@@ -32,9 +32,11 @@ class companyModel {
     set name(input) {
         this.company.name = input;
     }
-    createAccount() {
+    createCompany() {
         if (!this.company.name)
             return '会社名を入力してください';
+        if (!this.companyID)
+            return 'CompanyIDを入力してください';
         // this.company.uuid = uuid.v4();
         this.company.createdAt = new Date().getTime();
         this.companyMastRepository.createCompany(this.company);

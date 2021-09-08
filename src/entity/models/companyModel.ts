@@ -40,9 +40,10 @@ export class companyModel {
         this.company.name = input;
     }
 
-    public createAccount(): string {
-        
+    public createCompany(): string {
+
         if (!this.company.name) return '会社名を入力してください';
+        if (!this.companyID) return 'CompanyIDを入力してください';
 
         // this.company.uuid = uuid.v4();
         this.company.createdAt = new Date().getTime();

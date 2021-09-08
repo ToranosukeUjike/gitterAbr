@@ -11,5 +11,5 @@ export declare class companyModel {
     set companyID(input: Scalars['ID']);
     get name(): string;
     set name(input: string);
-    createAccount(): string;
+    createCompany(): string;
 }
