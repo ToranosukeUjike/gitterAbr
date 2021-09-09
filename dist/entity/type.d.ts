@@ -37,7 +37,8 @@ export declare type Company = {
 };
 export declare enum IssueState {
     Open = "Open",
-    Closed = "Closed"
+    Closed = "Closed",
+    None = "None"
 }
 export declare enum Label {
     Issue = "Issue",

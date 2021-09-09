@@ -40,7 +40,8 @@ export type Company = {
 
 export enum IssueState {
   Open = 'Open',
-  Closed = 'Closed'
+  Closed = 'Closed',
+  None = 'None'
 }
 
 export enum Label {

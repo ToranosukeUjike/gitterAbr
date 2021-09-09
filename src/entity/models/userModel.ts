@@ -11,7 +11,7 @@ export class userModel {
         this.user = user;
     }
 
-    public static getBlanc(username: string): User {
+    public static getBlanc(username: Scalars['ID']): User {
         return {
             username: username,
             companyID: '',

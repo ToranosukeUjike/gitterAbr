@@ -5,6 +5,7 @@ var IssueState;
 (function (IssueState) {
     IssueState["Open"] = "Open";
     IssueState["Closed"] = "Closed";
+    IssueState["None"] = "None";
 })(IssueState = exports.IssueState || (exports.IssueState = {}));
 var Label;
 (function (Label) {

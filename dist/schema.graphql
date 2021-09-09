@@ -27,6 +27,7 @@ type Company {
 enum IssueState {
   Open
   Closed
+  None
 }
 
 enum Label {

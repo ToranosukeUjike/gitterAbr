@@ -1,4 +1,5 @@
 enum IssueState {
     Open
     Closed
+    None
 }

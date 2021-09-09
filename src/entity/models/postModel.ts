@@ -9,6 +9,10 @@ import { IPostMastRepository } from "../repositoryInterface/postMastRepository"
 // 140文字以内の制限を返す、
 // 内容を聞かれたら内容を返す、等々
 
+// 会社毎のpost内容の配列を返したい。
+// 会社に紐づいているユーザーの取得。
+// My Accountページの細分化
+
 export class postModel {
     public postMastRepository: IPostMastRepository;
     public post: Post;
