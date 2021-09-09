@@ -6,5 +6,7 @@ export interface IUserMastRepository {
     deleteUserProfile(user: User): void;
     
     // 仮で返り血をvoidにしてます
-    fetchUserProfile(username: Scalars['ID']): void;
+    fetchUserProfileMastByUsername(username: Scalars['ID']): Promise<User>;
+    fetchUserProfileMastByPostID(postID: Scalars['ID']): Promise<User>;
+    fetchUsersProfileMastByCompanyID(companyID: Scalars['ID']): Promise<User[]>;
 }
