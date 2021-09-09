@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.postsInteractor = void 0;
-class postsInteractor {
+exports.usersInteractor = void 0;
+class usersInteractor {
     constructor(userMastRepository) {
         this.userMastRepository = userMastRepository;
     }
@@ -18,4 +18,4 @@ class postsInteractor {
         return user;
     }
 }
-exports.postsInteractor = postsInteractor;
+exports.usersInteractor = usersInteractor;

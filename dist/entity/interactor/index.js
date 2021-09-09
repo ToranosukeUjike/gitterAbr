@@ -10,9 +10,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./entity/models/postModel"), exports);
-__exportStar(require("./entity/models/userModel"), exports);
-__exportStar(require("./entity/models/companyModel"), exports);
-__exportStar(require("./entity/repositoryInterface/index"), exports);
-__exportStar(require("./entity/type"), exports);
-__exportStar(require("./entity/interactor/index"), exports);
+__exportStar(require("./postsInteractor"), exports);
+__exportStar(require("./usersInteractor"), exports);

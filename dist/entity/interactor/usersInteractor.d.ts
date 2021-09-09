@@ -1,6 +1,6 @@
 import { IUserMastRepository } from "../repositoryInterface/userMastRepository";
 import { Scalars, User } from "../type";
-export declare class postsInteractor {
+export declare class usersInteractor {
     private userMastRepository;
     constructor(userMastRepository: IUserMastRepository);
     fetchUsersByCompanyID(companyID: Scalars['ID']): Promise<User[]>;

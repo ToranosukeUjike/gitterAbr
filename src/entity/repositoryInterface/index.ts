@@ -1,3 +1,3 @@
 export * from './companyMastRepository';
 export * from './postMastRepository';
-export * from './userMastRepository'
+export * from './userMastRepository';

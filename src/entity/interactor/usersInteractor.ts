@@ -1,7 +1,7 @@
 import { IUserMastRepository } from "../repositoryInterface/userMastRepository";
 import { Scalars, User } from "../type";
 
-export class postsInteractor {
+export class usersInteractor {
   private userMastRepository: IUserMastRepository;
   
   constructor(userMastRepository: IUserMastRepository) {
