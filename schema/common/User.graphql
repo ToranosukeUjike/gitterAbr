@@ -2,7 +2,7 @@ type User {
     # PK uuid
     # SK companyID
     username: ID!
-    companyID: [ID]
+    companyID: ID
 
     name: String!
     bio: String

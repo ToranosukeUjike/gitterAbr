@@ -19,7 +19,7 @@ class userModel {
     static getBlanc(username) {
         return {
             username: username,
-            companyID: [],
+            companyID: '',
             name: '',
             bio: '',
             createdAt: new Date().getTime(),
@@ -31,21 +31,38 @@ class userModel {
         this.userMastRepository.createUserProfile(this.user);
         return 'プロフィールの作成に成功しました。';
     }
+    // public updateProfile(): string {
+    //     // まず、個人情報をこうしん
+    //     this.userMastRepository.updateUserProfile(this.user);
+    //     // 次に会社情報を更新
+    //     if(this.user && this.user.companyID) {
+    //         this.user.companyID!.forEach(async companyID => {
+    //             //　既存の会社情報を取得
+    //             const company: Company = await this.companyMastRepository.fetchCompany(companyID || '');
+    //             // 会社情報を更新
+    //             company.worker.push(this.user.username);
+    //             // 新しい会社情報データを保存する
+    //             this.companyMastRepository.updateCompany(company);
+    //         });
+    //     }
+    //     return 'プロフィールの変更に成功しました。';
+    // }
     updateProfile() {
-        // まず、個人情報をこうしん
-        this.userMastRepository.updateUserProfile(this.user);
-        // 次に会社情報を更新
-        if (this.user && this.user.companyID) {
-            this.user.companyID.forEach((companyID) => __awaiter(this, void 0, void 0, function* () {
+        return __awaiter(this, void 0, void 0, function* () {
+            // まず、個人情報をこうしん
+            this.userMastRepository.updateUserProfile(this.user);
+            // 次に会社情報を更新
+            if (this.user && this.user.companyID) {
                 //　既存の会社情報を取得
-                const company = yield this.companyMastRepository.fetchCompany(companyID || '');
+                const company = yield this.companyMastRepository.fetchCompany(this.user.companyID || '');
                 // 会社情報を更新
                 company.worker.push(this.user.username);
                 // 新しい会社情報データを保存する
                 this.companyMastRepository.updateCompany(company);
-            }));
-        }
-        return 'プロフィールの変更に成功しました。';
+            }
+            ;
+            return 'プロフィールの変更に成功しました。';
+        });
     }
     get username() {
         return this.user.username;

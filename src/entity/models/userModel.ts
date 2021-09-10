@@ -22,7 +22,7 @@ export class userModel {
     public static getBlanc(username: Scalars['ID']): User {
         return {
             username: username,
-            companyID: [],
+            companyID: '',
             name: '',
             bio: '',
             createdAt: new Date().getTime(),
@@ -36,23 +36,40 @@ export class userModel {
         return 'プロフィールの作成に成功しました。';
     }
 
-    public updateProfile(): string {
+    // public updateProfile(): string {
+    //     // まず、個人情報をこうしん
+    //     this.userMastRepository.updateUserProfile(this.user);
+    //     // 次に会社情報を更新
+    //     if(this.user && this.user.companyID) {
+    //         this.user.companyID!.forEach(async companyID => {
+    //             //　既存の会社情報を取得
+    //             const company: Company = await this.companyMastRepository.fetchCompany(companyID || '');
+    //             // 会社情報を更新
+    //             company.worker.push(this.user.username);
+    //             // 新しい会社情報データを保存する
+    //             this.companyMastRepository.updateCompany(company);
+    //         });
+    //     }
+            
+    //     return 'プロフィールの変更に成功しました。';
+    // }
+    
+    public async updateProfile(): Promise<string> {
         // まず、個人情報をこうしん
         this.userMastRepository.updateUserProfile(this.user);
         // 次に会社情報を更新
         if(this.user && this.user.companyID) {
-            this.user.companyID!.forEach(async companyID => {
-                //　既存の会社情報を取得
-                const company: Company = await this.companyMastRepository.fetchCompany(companyID || '');
-                // 会社情報を更新
-                company.worker.push(this.user.username);
-                // 新しい会社情報データを保存する
-                this.companyMastRepository.updateCompany(company);
-            });
-        }
+            //　既存の会社情報を取得
+            const company: Company = await this.companyMastRepository.fetchCompany(this.user.companyID || '');
+            // 会社情報を更新
+            company.worker.push(this.user.username);
+            // 新しい会社情報データを保存する
+            this.companyMastRepository.updateCompany(company);
+        };
             
         return 'プロフィールの変更に成功しました。';
     }
+
 
     public get username(): string {
         return this.user.username;
