@@ -7,6 +7,6 @@ export interface IPostMastRepository {
     deletePostMast(post: Post): Promise<Post>;
 
     // Post読み込み
-    fetchPostMastByCompanyID(companyID: Scalars['ID']): Promise<Post[]>;
-    fetchPostsMastByUsername(username: Scalars['ID']): Promise<Post[]>;
+    fetchPostMastByCompanyID(companyID: Scalars['ID']): Post[];
+    fetchPostsMastByUsername(username: Scalars['ID']): Post[];
 }
