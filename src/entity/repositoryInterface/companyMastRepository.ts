@@ -5,6 +5,7 @@ export interface ICompanyMastRepository {
     updateCompany(company: Company): void;
     deleteCompany(company: Company): void;
 
-    fetchCompany(name: Scalars['String']): Promise<Company>;
-    fetchCompanyByUsername(username: Scalars['ID']): Promise<Company[]>;
+    fetchCompany(companyID: Scalars['String']): Promise<Company>;
+    fetchAllCompany(): Promise<Company[]>;
+    fetchCompaniesByUsername(username: Scalars['ID']): Promise<Company[]>;
 }
