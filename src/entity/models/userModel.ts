@@ -53,7 +53,7 @@ export class userModel {
             
     //     return 'プロフィールの変更に成功しました。';
     // }
-    
+
     public async updateProfile(): Promise<string> {
         // まず、個人情報をこうしん
         this.userMastRepository.updateUserProfile(this.user);
@@ -71,10 +71,10 @@ export class userModel {
     }
 
 
-    public get username(): string {
+    public get username(): Scalars['ID'] {
         return this.user.username;
     }
-    public set username(input: string) {
+    public set username(input: Scalars['ID']) {
         this.user.username = input;
     }
 
@@ -90,5 +90,12 @@ export class userModel {
     }
     public set bio(input: string) {
         this.user.bio = input;
+    }
+
+    public get companyID(): Scalars['ID'] {
+        return this.user.companyID || '';
+    }
+    public set companyID(input: Scalars['ID']) {
+        this.user.companyID = input;
     }
 }

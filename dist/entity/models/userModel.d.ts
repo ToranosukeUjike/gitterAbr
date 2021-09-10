@@ -9,10 +9,12 @@ export declare class userModel {
     static getBlanc(username: Scalars['ID']): User;
     createProfile(): string;
     updateProfile(): Promise<string>;
-    get username(): string;
-    set username(input: string);
+    get username(): Scalars['ID'];
+    set username(input: Scalars['ID']);
     get name(): string;
     set name(input: string);
     get bio(): string;
     set bio(input: string);
+    get companyID(): Scalars['ID'];
+    set companyID(input: Scalars['ID']);
 }

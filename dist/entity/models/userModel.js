@@ -82,5 +82,11 @@ class userModel {
     set bio(input) {
         this.user.bio = input;
     }
+    get companyID() {
+        return this.user.companyID || '';
+    }
+    set companyID(input) {
+        this.user.companyID = input;
+    }
 }
 exports.userModel = userModel;
