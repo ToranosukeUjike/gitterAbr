@@ -3,6 +3,6 @@ import { Scalars, Post } from "../type";
 export declare class postsInteractor {
     private postMastRepository;
     constructor(postMastRepository: IPostMastRepository);
-    fetchPostsByCompanyID(companyID: Scalars['ID']): Post[];
-    fetchPostsByUsername(username: Scalars['ID']): Post[];
+    fetchPostsByCompanyID(companyID: Scalars['ID']): Promise<Post[]>;
+    fetchPostsByUsername(username: Scalars['ID']): Promise<Post[]>;
 }
