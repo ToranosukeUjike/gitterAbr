@@ -16,6 +16,9 @@ export class companyModel {
             companyID: '',
             masterID: username,
             name: '',
+            worker: [
+                username,
+            ]
         }
     }
 

@@ -12,6 +12,9 @@ class companyModel {
             companyID: '',
             masterID: username,
             name: '',
+            worker: [
+                username,
+            ]
         };
     }
     get masterID() {

@@ -3,6 +3,8 @@ type Company {
     masterID: ID!
     name: String!
 
+    worker: [String]!
+
     createdAt: AWSTimestamp
     deletedAt: AWSTimestamp
 }

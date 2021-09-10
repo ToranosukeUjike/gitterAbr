@@ -34,6 +34,7 @@ export type Company = {
   companyID: Scalars['ID'];
   masterID: Scalars['ID'];
   name: Scalars['String'];
+  worker: Array<Maybe<Scalars['String']>>;
   createdAt?: Maybe<Scalars['AWSTimestamp']>;
   deletedAt?: Maybe<Scalars['AWSTimestamp']>;
 };
