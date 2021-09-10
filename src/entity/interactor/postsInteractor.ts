@@ -1,5 +1,5 @@
 import { IPostMastRepository } from "../repositoryInterface/postMastRepository";
-import { Scalars, Post } from "../type";
+import { Scalars, Post, User } from "../type";
 
 export class postsInteractor {
   private postMastRepository: IPostMastRepository;
@@ -8,6 +8,10 @@ export class postsInteractor {
     this.postMastRepository = postMastRepository;
   }
 
+  public async fetchPostsByUser(user: User): Promise<Post[]> {
+    const posts: Post[] = await this.postMastRepository.fetchPostMastByUser(user);
+    return posts;
+  }
   public async fetchPostsByCompanyID(companyID: Scalars['ID']): Promise<Post[]> {
     const posts: Post[] = await this.postMastRepository.fetchPostMastByCompanyID(companyID);
     return posts;

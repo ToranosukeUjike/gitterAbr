@@ -14,6 +14,12 @@ class postsInteractor {
     constructor(postMastRepository) {
         this.postMastRepository = postMastRepository;
     }
+    fetchPostsByUser(user) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const posts = yield this.postMastRepository.fetchPostMastByUser(user);
+            return posts;
+        });
+    }
     fetchPostsByCompanyID(companyID) {
         return __awaiter(this, void 0, void 0, function* () {
             const posts = yield this.postMastRepository.fetchPostMastByCompanyID(companyID);
