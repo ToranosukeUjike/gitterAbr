@@ -77,7 +77,7 @@ export enum PrivacyState {
 export type User = {
   __typename?: 'User';
   username: Scalars['ID'];
-  companyID?: Maybe<Scalars['ID']>;
+  companyID?: Maybe<Array<Maybe<Scalars['ID']>>>;
   name: Scalars['String'];
   bio?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['AWSTimestamp']>;

@@ -1,9 +1,11 @@
 import { Scalars, User } from '../type';
 import { IUserMastRepository } from "../repositoryInterface/userMastRepository";
+import { ICompanyMastRepository } from "../repositoryInterface/companyMastRepository";
 export declare class userModel {
     userMastRepository: IUserMastRepository;
+    companyMastRepository: ICompanyMastRepository;
     user: User;
-    constructor(userMastRepository: IUserMastRepository, user: User);
+    constructor(userMastRepository: IUserMastRepository, companyMastRepository: ICompanyMastRepository, user: User);
     static getBlanc(username: Scalars['ID']): User;
     createProfile(): string;
     updateProfile(): string;
