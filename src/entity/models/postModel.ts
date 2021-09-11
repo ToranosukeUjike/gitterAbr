@@ -58,7 +58,7 @@ export class postModel {
         return '投稿しました';
     }
 
-    public set setPost(post: Post) {
+    public set initializedPost(post: Post) {
         this.post = post;
     }
 
