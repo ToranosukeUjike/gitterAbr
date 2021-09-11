@@ -29,6 +29,10 @@ export class userModel {
         }
     }
 
+    public setUser(user: User) {
+        this.user = user;
+    }
+
     public createProfile(): string {
         if (!this.user.name) return '名前を入力してください';
 
