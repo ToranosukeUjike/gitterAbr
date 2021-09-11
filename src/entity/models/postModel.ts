@@ -58,10 +58,14 @@ export class postModel {
         return '投稿しました';
     }
 
+    public set setPost(post: Post) {
+        this.post = post;
+    }
+
     public get text(): string{
        return this.post.text;
     }
-    public set text(input: string){
+    public set text(input: string) {
         this.post.text = input;
     }
 

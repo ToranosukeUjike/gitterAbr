@@ -44,6 +44,9 @@ class postModel {
         this.postMastRepository.createPostMast(this.post);
         return '投稿しました';
     }
+    set setPost(post) {
+        this.post = post;
+    }
     get text() {
         return this.post.text;
     }
