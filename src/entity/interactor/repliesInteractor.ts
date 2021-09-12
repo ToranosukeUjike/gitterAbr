@@ -1,5 +1,5 @@
 import { IReplyMastRepository } from "../repositoryInterface/replyMastRepository";
-import { Scalars, Reply } from "../type";
+import { Reply, Post } from "../type";
 
 export class repliesInteractor {
   private replyMastRepository: IReplyMastRepository;
@@ -8,8 +8,8 @@ export class repliesInteractor {
     this.replyMastRepository = replyMastRepository;
   }
 
-  public async fetchReplyByRootID(rootID: Scalars['ID']): Promise<Reply[]> {
-    const replies: Reply[] = await this.replyMastRepository.fetchReplyMastByRootID(rootID);
+  public async fetchReplyByRootID(post: Post): Promise<Reply[]> {
+    const replies: Reply[] = await this.replyMastRepository.fetchReplyMastByRootID(post);
     return replies;
   }
 }

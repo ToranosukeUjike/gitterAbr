@@ -14,9 +14,9 @@ class repliesInteractor {
     constructor(replyMastRepository) {
         this.replyMastRepository = replyMastRepository;
     }
-    fetchReplyByRootID(rootID) {
+    fetchReplyByRootID(post) {
         return __awaiter(this, void 0, void 0, function* () {
-            const replies = yield this.replyMastRepository.fetchReplyMastByRootID(rootID);
+            const replies = yield this.replyMastRepository.fetchReplyMastByRootID(post);
             return replies;
         });
     }

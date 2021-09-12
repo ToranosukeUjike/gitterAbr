@@ -1,7 +1,7 @@
-import { Reply, Scalars } from "../type";
+import { Post, Reply } from "../type";
 export interface IReplyMastRepository {
     createdReplyMast(reply: Reply): Promise<Reply>;
     updatedReplyMast(reply: Reply): Promise<Reply>;
     deletedReplyMast(reply: Reply): Promise<Reply>;
-    fetchReplyMastByRootID(rootID: Scalars['ID']): Promise<Reply[]>;
+    fetchReplyMastByRootID(post: Post): Promise<Reply[]>;
 }

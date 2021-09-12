@@ -1,4 +1,4 @@
-import { Reply, Scalars } from "../type"
+import { Post, Reply } from "../type"
 
 export interface IReplyMastRepository {
   // dReply CRUD
@@ -7,5 +7,5 @@ export interface IReplyMastRepository {
   deletedReplyMast(reply: Reply): Promise<Reply>;
 
   // dReply読み込み
-  fetchReplyMastByRootID(rootID: Scalars['ID']): Promise<Reply[]>;
+  fetchReplyMastByRootID(post: Post): Promise<Reply[]>;
 }
