@@ -13,6 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./entity/models/postModel"), exports);
 __exportStar(require("./entity/models/userModel"), exports);
 __exportStar(require("./entity/models/companyModel"), exports);
+__exportStar(require("./entity/models/replyModel"), exports);
 __exportStar(require("./entity/repositoryInterface/index"), exports);
 __exportStar(require("./entity/type"), exports);
 __exportStar(require("./entity/interactor/index"), exports);
