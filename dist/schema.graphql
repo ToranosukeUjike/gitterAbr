@@ -47,7 +47,7 @@ type Post {
   text: String!
   label: Label
   assign: ID
-  replyFrom: [ID]
+  replyFrom: [ID!]!
   issueState: IssueState
   privacyState: PrivacyState!
   createdAt: AWSTimestamp

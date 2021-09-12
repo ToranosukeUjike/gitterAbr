@@ -44,7 +44,7 @@ export class replyModel {
     this.reply.text = input;
   }
 
-  public get replyFrom(): Scalars['ID'][]{
+  public get replyFrom(): Scalars['ID'][] {
     return this.reply.replyFrom;
   }
   public set replyFrom(input: Scalars['ID'][]) {

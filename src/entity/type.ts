@@ -62,7 +62,7 @@ export type Post = {
   text: Scalars['String'];
   label?: Maybe<Label>;
   assign?: Maybe<Scalars['ID']>;
-  replyFrom?: Maybe<Array<Maybe<Scalars['ID']>>>;
+  replyFrom: Array<Scalars['ID']>;
   issueState?: Maybe<IssueState>;
   privacyState: PrivacyState;
   createdAt?: Maybe<Scalars['AWSTimestamp']>;

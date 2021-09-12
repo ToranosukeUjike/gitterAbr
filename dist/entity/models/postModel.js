@@ -45,8 +45,7 @@ class postModel {
         return '投稿しました';
     }
     get replyFrom() {
-        const n = '値が無いです';
-        return this.post.replyFrom || n;
+        return this.post.replyFrom;
     }
     set replyFrom(input) {
         this.post.replyFrom = input;
