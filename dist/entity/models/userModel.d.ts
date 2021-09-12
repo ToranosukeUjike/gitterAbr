@@ -7,7 +7,6 @@ export declare class userModel {
     user: User;
     constructor(userMastRepository: IUserMastRepository, companyMastRepository: ICompanyMastRepository, user: User);
     static getBlanc(username: Scalars['ID']): User;
-    setUser(user: User): void;
     createProfile(): string;
     updateProfile(): Promise<string>;
     get username(): Scalars['ID'];

@@ -11,7 +11,9 @@ type Post {
     text: String!
     label: Label
     assign: ID
-    replyID: ID
+    replyFrom: [ID],
+    replyID: ID,
+    rootID: ID,
     issueState: IssueState
     privacyState: PrivacyState!
 

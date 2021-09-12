@@ -25,9 +25,6 @@ class userModel {
             createdAt: new Date().getTime(),
         };
     }
-    setUser(user) {
-        this.user = user;
-    }
     createProfile() {
         if (!this.user.name)
             return '名前を入力してください';

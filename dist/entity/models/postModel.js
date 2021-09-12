@@ -28,7 +28,9 @@ class postModel {
             text: '',
             label: undefined,
             assign: '',
+            replyFrom: [],
             replyID: '',
+            rootID: '',
             issueState: type_1.IssueState.Open,
             privacyState: type_1.PrivacyState.Public
         };

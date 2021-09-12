@@ -37,7 +37,9 @@ export class postModel {
             text: '',
             label: undefined,
             assign: '',
+            replyFrom: [],
             replyID: '',
+            rootID: '',
             issueState: IssueState.Open,
             privacyState: PrivacyState.Public
         }

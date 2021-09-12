@@ -2,8 +2,6 @@ import { Scalars, User, Company } from '../type';
 import { IUserMastRepository } from "../repositoryInterface/userMastRepository"
 import { ICompanyMastRepository } from "../repositoryInterface/companyMastRepository"
 
-
-
 export class userModel {
     public userMastRepository: IUserMastRepository;
     public companyMastRepository: ICompanyMastRepository;
@@ -27,10 +25,6 @@ export class userModel {
             bio: '',
             createdAt: new Date().getTime(),
         }
-    }
-
-    public setUser(user: User) {
-        this.user = user;
     }
 
     public createProfile(): string {
