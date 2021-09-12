@@ -7,5 +7,8 @@ export interface IReplyMastRepository {
   deletedReplyMast(reply: Reply): Promise<Reply>;
 
   // dReply読み込み
-  fetchReplyMastByRootID(post: Post): Promise<Reply[]>;
+  fetchReplyMastByRootID(post: Post): Promise<{
+    post: Post | null,
+    replies: Reply[],
+  }>;
 }

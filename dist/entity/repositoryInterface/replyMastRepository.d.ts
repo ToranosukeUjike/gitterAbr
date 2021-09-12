@@ -3,5 +3,8 @@ export interface IReplyMastRepository {
     createdReplyMast(reply: Reply): Promise<Reply>;
     updatedReplyMast(reply: Reply): Promise<Reply>;
     deletedReplyMast(reply: Reply): Promise<Reply>;
-    fetchReplyMastByRootID(post: Post): Promise<Reply[]>;
+    fetchReplyMastByRootID(post: Post): Promise<{
+        post: Post | null;
+        replies: Reply[];
+    }>;
 }

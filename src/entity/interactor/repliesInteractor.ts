@@ -1,6 +1,11 @@
 import { IReplyMastRepository } from "../repositoryInterface/replyMastRepository";
 import { Reply, Post } from "../type";
 
+interface IPostAndReplies {
+  post: Post | null,
+  replies: Reply[]
+}
+
 export class repliesInteractor {
   private replyMastRepository: IReplyMastRepository;
   
@@ -8,8 +13,8 @@ export class repliesInteractor {
     this.replyMastRepository = replyMastRepository;
   }
 
-  public async fetchReplyByRootID(post: Post): Promise<Reply[]> {
-    const replies: Reply[] = await this.replyMastRepository.fetchReplyMastByRootID(post);
-    return replies;
+  public async fetchReplyByRootID(post: Post): Promise<IPostAndReplies> {
+    const postAndReplies: IPostAndReplies = await this.replyMastRepository.fetchReplyMastByRootID(post);
+    return postAndReplies;
   }
 }
