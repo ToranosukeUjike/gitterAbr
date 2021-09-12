@@ -58,8 +58,6 @@ export declare type Post = {
     label?: Maybe<Label>;
     assign?: Maybe<Scalars['ID']>;
     replyFrom?: Maybe<Array<Maybe<Scalars['ID']>>>;
-    replyID?: Maybe<Scalars['ID']>;
-    rootID?: Maybe<Scalars['ID']>;
     issueState?: Maybe<IssueState>;
     privacyState: PrivacyState;
     createdAt?: Maybe<Scalars['AWSTimestamp']>;
@@ -69,6 +67,19 @@ export declare enum PrivacyState {
     Public = "Public",
     Private = "Private"
 }
+export declare type Reply = {
+    __typename?: 'Reply';
+    companyID: Scalars['ID'];
+    username: Scalars['ID'];
+    replyID: Scalars['ID'];
+    name: Scalars['String'];
+    text: Scalars['String'];
+    label: Label;
+    rootID: Scalars['ID'];
+    replyFrom: Array<Scalars['ID']>;
+    createdAt?: Maybe<Scalars['AWSTimestamp']>;
+    deletedAt?: Maybe<Scalars['AWSTimestamp']>;
+};
 export declare type User = {
     __typename?: 'User';
     username: Scalars['ID'];

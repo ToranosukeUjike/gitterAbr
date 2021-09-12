@@ -29,8 +29,6 @@ class postModel {
             label: undefined,
             assign: '',
             replyFrom: [],
-            replyID: '',
-            rootID: '',
             issueState: type_1.IssueState.Open,
             privacyState: type_1.PrivacyState.Public
         };
@@ -46,8 +44,12 @@ class postModel {
         this.postMastRepository.createPostMast(this.post);
         return '投稿しました';
     }
-    set initializedPost(post) {
-        this.post = post;
+    get replyFrom() {
+        const n = '値が無いです';
+        return this.post.replyFrom || n;
+    }
+    set replyFrom(input) {
+        this.post.replyFrom = input;
     }
     get text() {
         return this.post.text;

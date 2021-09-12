@@ -38,8 +38,6 @@ export class postModel {
             label: undefined,
             assign: '',
             replyFrom: [],
-            replyID: '',
-            rootID: '',
             issueState: IssueState.Open,
             privacyState: PrivacyState.Public
         }
@@ -60,8 +58,12 @@ export class postModel {
         return '投稿しました';
     }
 
-    public set initializedPost(post: Post) {
-        this.post = post;
+    public get replyFrom(): Scalars['ID'][] {
+        const n: any = '値が無いです';
+        return this.post.replyFrom || n;
+    }
+    public set replyFrom(input: Scalars['ID'][]) {
+        this.post.replyFrom = input;
     }
 
     public get text(): string{

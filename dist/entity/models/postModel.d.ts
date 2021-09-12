@@ -6,7 +6,8 @@ export declare class postModel {
     constructor(postMastRepository: IPostMastRepository, post: Post);
     static getBlanc(companyID: Scalars['ID'], username: Scalars['ID'], name: string): Post;
     createPost(): string;
-    set initializedPost(post: Post);
+    get replyFrom(): Scalars['ID'][];
+    set replyFrom(input: Scalars['ID'][]);
     get text(): string;
     set text(input: string);
     get title(): string;

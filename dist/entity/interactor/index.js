@@ -13,3 +13,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./postsInteractor"), exports);
 __exportStar(require("./usersInteractor"), exports);
 __exportStar(require("./companiesInteractor"), exports);
+__exportStar(require("./repliesInteractor"), exports);

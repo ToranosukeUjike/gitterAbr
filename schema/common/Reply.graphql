@@ -1,0 +1,17 @@
+type Reply {
+  # PK userID
+  # SK postID
+  companyID: ID!
+  username: ID!
+  replyID: ID!
+
+  # Reply
+  name: String!
+  text: String!
+  label: Label!
+  rootID: ID!
+  replyFrom: [ID!]!
+
+  createdAt: AWSTimestamp
+  deletedAt: AWSTimestamp
+}

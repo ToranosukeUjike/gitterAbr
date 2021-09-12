@@ -48,8 +48,6 @@ type Post {
   label: Label
   assign: ID
   replyFrom: [ID]
-  replyID: ID
-  rootID: ID
   issueState: IssueState
   privacyState: PrivacyState!
   createdAt: AWSTimestamp
@@ -59,6 +57,19 @@ type Post {
 enum PrivacyState {
   Public
   Private
+}
+
+type Reply {
+  companyID: ID!
+  username: ID!
+  replyID: ID!
+  name: String!
+  text: String!
+  label: Label!
+  rootID: ID!
+  replyFrom: [ID!]!
+  createdAt: AWSTimestamp
+  deletedAt: AWSTimestamp
 }
 
 type User {
