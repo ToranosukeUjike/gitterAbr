@@ -23,6 +23,9 @@ class replyModel {
         if (this.reply.text.length === 0)
             return '入力してください';
         this.reply.createdAt = new Date().getTime();
+        // 削除予定********************
+        this.reply.replyID = 'testaaa';
+        // 削除予定********************
         this.replyMastRepository.createdReplyMast(this.reply);
         return '返信しました';
     }
